@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Relatórios</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Base de dados CPF e CNPJ</h1>
+    </header>
+    <main>
+        <div id="alert" class="alert hidden"></div>
+        <form id="search-form" action="/search" method="post">
+            <label for="search_type">Tipo de Busca:</label>
+            <select name="search_type" id="search_type">
+                <option value="cpf_real">CPF Real</option>
+                <option value="cpf_restricao">CPF com Restrição</option>
+                <option value="cnpj_real">CNPJ Real</option>
+            </select>
+            <br>
+            <label for="search_term">Termo de Busca:</label>
+            <input type="text" id="search_term" name="search_term">
+            <br>
+            <input type="submit" value="Buscar">
+            <button type="button" id="clear-search">Limpar</button>
+            <button type="button" id="refresh-page">Atualizar</button>
+        </form>
+
+        <button id="toggle-add-form">Adicionar CPF/CNPJ</button>
+
+        <form id="add-form" class="hidden">
+            <label for="add_type">Tipo:</label>
+            <select name="add_type" id="add_type">
+                <option value="cpf_real">CPF Real</option>
+                <option value="cpf_restricao">CPF com Restrição</option>
+                <option value="cnpj_real">CNPJ Real</option>
+            </select>
+            <br>
+            <label for="add_name">Nome:</label>
+            <input type="text" id="add_name" name="add_name">
+            <br>
+            <label for="add_term">CPF/CNPJ:</label>
+            <input type="text" id="add_term" name="add_term">
+            <br>
+            <input type="submit" value="Adicionar">
+            <button type="button" id="clear-add-form">Limpar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; Bruno Bertin 2025 Consulta de Relatórios</p>
+    </footer>
+    <script src="static/js/script.js"></script>
+</body>
+</html>

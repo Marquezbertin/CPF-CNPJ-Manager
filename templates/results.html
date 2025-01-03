@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados da Busca</title>
+</head>
+<body>
+    <h1>Resultados da Busca</h1>
+    <table border="1">
+        <tr>
+            {% if search_type == 'cpf_real' %}
+                <th>Nome</th>
+                <th>CPF</th>
+            {% elif search_type == 'cpf_restricao' %}
+                <th>CPF</th>
+                <th>Tipo de Restrição</th>
+            {% elif search_type == 'cnpj_real' %}
+                <th>Nome da Empresa</th>
+                <th>CNPJ</th>
+            {% endif %}
+        </tr>
+        {% for result in results %}
+            <tr>
+                {% for key, value in result.items() %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Nova Busca</a>
+</body>
+</html>
