@@ -34,7 +34,7 @@ Este projeto é uma aplicação web para cadastro, consulta, edição e exclusã
 
 1. **Clone o Repositório**
    ```sh
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/Marquezbertin/CPF-CNPJ-Manager
    cd nome-do-repositorio ```
    
 2. ## Crie um Ambiente Virtual
